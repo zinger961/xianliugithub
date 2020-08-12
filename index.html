@@ -717,8 +717,10 @@
 
 		
 		<script>
-			$.getJSON("http://ip-api.io/api/json",function(data){
-   $("#myip").text(data.ip)
+$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+    var data2=data.split("ip=");
+	var data3=data2[1].split("ts=")
+	$("#myip").text(data3[0]);
 })
 			var __lc = {
 				license: 2434331,
