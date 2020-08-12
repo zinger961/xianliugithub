@@ -717,7 +717,7 @@
 
 		
 		<script>
-			$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+			$.getJSON("http://ip-api.io/api/json",function(data){
    $("#myip").text(data.ip)
 })
 			var __lc = {
