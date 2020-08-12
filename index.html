@@ -1,1 +1,729 @@
-hello
+<!DOCTYPE html>
+<html lang="en"><head>
+		<meta charset="utf-8">
+		<title>.: 线路检查 :.</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="red">
+
+		<link rel="dns-prefetch" href="https://media.wvwuwvuwvw.com">
+		<link rel="apple-touch-icon" sizes="57x57" href="/favicons/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/favicons/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/favicons/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/favicons/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/favicons/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/favicons/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/favicons/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicons/apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicons/favicon-194x194.png" sizes="194x194">
+		<link rel="icon" type="image/png" href="/favicons/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/favicons/android-chrome-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="shortcut icon" href="/favicons/favicon.ico">
+		<meta name="msapplication-TileColor" content="#ed1b33">
+		<meta name="msapplication-TileImage" content="/favicons/mstile-144x144.png">
+		<meta name="msapplication-config" content="/favicons/browserconfig.xml">
+		<meta name="theme-color" content="#fff">
+
+		<style>
+			body{
+			font-family: "Microsoft YaHei", "Hiragino Sans GB", "微软雅黑", STXihei, SimHei, sans-serif;
+			font-size: 13px;
+			line-height: 1.42857;
+			color: #333333;
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/background.jpg') center top no-repeat fixed;
+				margin: 0;
+			}
+			header{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/header.png') center bottom no-repeat;
+				height: 100px;
+				padding-top: 50px;
+				clear: both;
+			}
+			.mobileonly {
+				display: none;
+			}
+			.simpan_button{
+				margin-top: 10px;
+				float: right;
+				font-size: 14px;
+				color: #d1d1d1;
+			}
+			.simpan_button a{
+				color: #d1d1d1;
+				text-decoration: none;
+			}
+			.simpan_button a:hover{
+				color: #ff3655;
+			}
+			.header_menu{
+				text-align: center;
+				margin-top: 47px;
+				margin-left: 2px;
+			}
+			.header_menu a{
+				color: #fff;
+				font-size: 16px;
+				text-decoration: none;
+				width: 169px;
+				display: inline-block;
+				height: 50px;
+				line-height: 50px;
+				background: #ec3551;
+			}
+			.header_menu a:hover{
+				background: #3f1d1d
+			}
+			.iplocation{
+				color: #d1d1d1;
+				text-align: center;
+				margin-top: 60px;
+			}
+			.ping{
+				margin: 40px 81px;
+				display: inline-block;
+			}
+			.domain{
+				width: 305px;
+				text-align: center;
+				padding-top: 30px;
+				float: left;
+				margin: 20px;
+			}
+			.domain.blue2{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/speedblue.png') center top no-repeat;
+			}
+			.ms-num-blue{
+				font-size: 40px;
+				color: #6af1ff;
+			}
+			.ms-blue{
+				font-size: 20px;
+				color: #e2e2e2;
+			}
+			.domain.red{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/speedred.png') center top no-repeat;
+			}
+			.ms-num-red{
+				font-size: 40px;
+				color: #ff785f;
+			}
+			.ms-red{
+				font-size: 20px;
+				color: #ff785f;
+			}
+			.domian-textbox{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/linkbox.png') center no-repeat;
+				height: 42px;
+				line-height: 43px;
+				margin-top: 24px;
+			}
+			.domian-textbox:hover{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/linkbox-hover.png') center no-repeat;
+			}
+			.domian-textbox input{
+				text-align: center;
+				background: none;
+				color: #5f5f5f;
+				font-size: 16px;
+				border: 0;
+				pointer-events: none;
+			}
+			.domian-textbox a{
+				color: #ffff;
+				text-decoration: none;
+				float: right;
+				margin-right: 11px;
+			}
+			.refreshbtn{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/refreshbtn.png') center no-repeat;
+				width: 277px;
+				height: 53px;
+				display: block;
+				margin: 0 auto;
+			}
+			.refreshbtn:hover{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/refresh-hover.png') center no-repeat;
+			}
+			footer{
+				background: url('https://media.wvwuwvuwvw.com/e8fe/images/navigator/footer.png') center bottom no-repeat;
+				height: 278px;
+				clear: both;
+				margin-top: 70px;
+				text-align: center;
+				color: #d2d2d2;
+				font-size: 16px;
+			}
+			footer a{
+				color: #d2d2d2;
+				text-decoration: none;
+			}
+			.contact img:first-child{
+				margin-left: 0px;
+			}
+			.contact img{
+				margin-right: 12px;
+				margin-left: 44px;
+			}
+			.weixin_qr p{
+				color: #fff;
+				margin: 0;
+				padding: 0;
+			}
+			#bodydiv{
+				width:1200px;margin: 0 auto;
+			}
+			#wx1{
+				position: absolute; margin: 90px 0 0 223px;
+			}
+			#wx2{
+				position: absolute; margin: 92px 0 0 373px;
+			}
+			#footer{
+				text-align: left;width: 1000px;margin: 0 auto;padding-top: 113px;
+			}
+			.footfoot{
+				margin-top: 30px;
+			}
+			@media  only screen and (max-width: 640px) {
+				#bodydiv{
+					width:100%;margin: 0 auto;
+				}
+				.mobileonly{
+					display: block;
+				}
+				.pconly{
+					display: none;
+				}
+				.header_menu{
+					margin-left: auto;
+				}
+				.header_menu a{
+					width: 33.3333%;
+					display: block;
+					float: left;
+				}
+				.domian-textbox a{
+						float: none;
+						margin-left: 11px;
+						margin-right: none;
+				}
+				.domain{
+					margin: 0 auto;
+				width: 100%;
+				padding-top:60px;
+				}
+				.ping{
+					margin: 0 auto;
+				}
+				.refreshbtn{
+					margin-top: 20px;
+				}
+				#footer{
+					width: 100%;
+						padding-top: 200px;
+				}
+				#wx1{
+						margin: 0px 0 0 -130px;
+				}
+				#wx2{
+					margin: auto;
+				}
+				.contact{
+					text-align: center;
+				}
+				.contact img{
+					margin-left: 0px;
+					margin-right: 0px;
+				}
+				.footfoot{
+					margin:40px;
+				}
+				.simpan_button{
+					margin-right: 10px;
+				}
+			}
+		</style>
+		<style type="text/css">#livechat-full {  bottom: 0 !important;  right: 0 !important;  max-height: 100% !important;  width: 444px !important;}
+
+
+#livechat-compact-container {	right: 5px !important;	bottom: 10px !important;	min-width: 100px !important;	min-height: 100px !important;}
+
+#livechat-compact-view {  top: 0 !important;  left: 2px !important;}
+
+#livechat-compact-view:hover {    border: 1px solid #000;}
+
+#livechat-badge {	top: 30px !important;}</style></head><body><img src="https://media.wvwuwvuwvw.com/e8fe/images/navigator/linkbox-hover.png" style="display: none;">
+		<img src="https://media.wvwuwvuwvw.com/e8fe/images/navigator/refresh-hover.png" style="display: none;">
+	
+
+	
+		<div id="bodydiv">
+			<header class="pconly">
+				<div class="header_menu">
+					<a href="https://www.708yf.com/rng/?utm_campaign=click&amp;utm_term=rng&amp;utm_content=导航网" target="_blank" rel="noopener" style="border-radius: 30px 0 0 30px;margin-left: -1px;">免费试玩</a>
+					<a href="https://www.708yf.com/help/?utm_campaign=click&amp;utm_term=新手指南&amp;utm_content=导航网" target="_blank" rel="noopener" style="margin-left: -3px;padding-right: 4px;margin-right: -4px;">新手指南</a>
+					<a href="https://www.708yf.com/e8download/?utm_campaign=click&amp;utm_term=下载专区&amp;utm_content=导航网" target="_blank" rel="noopener" style="border-radius: 0 30px 30px 0;">速连登入器</a>
+				</div>
+			</header>
+
+			<header class="mobileonly">
+				<div class="header_menu">
+					<a href="https://www.708yf.com/rng/?utm_campaign=click&amp;utm_term=rng&amp;utm_content=导航网" target="_blank" rel="noopener" style="width: 50%;">免费试玩</a>
+					<a href="https://www.708yf.com/download/e8AppAndroid/?utm_campaign=click&amp;utm_term=APPDownload&amp;utm_content=导航网" target="_blank" rel="noopener" style="width: 50%;">下载E8APP</a>
+				</div>
+			</header>
+
+			<div class="iplocation">
+				<span style="font-size: 20px;">您当前的IP位置</span> <span style="font-size: 36px;color:#fff;">211.24.96.115</span><div style="font-size: 16px;">备用网址温馨提示：反应时间越小，网站速度越快。</div>
+			</div>
+
+			<div class="ping">
+									<div class="domain blue" id="domain-0">
+						<canvas width="150" height="150" id="circle-0" style="position: absolute;margin: -40px -75px;"></canvas>
+						<div class="ms-num ms-num-red">119</div>
+						<div class="ms-red">ms</div>
+						<div class="domian-textbox">
+							<input type="text" value="www.yfguangdong.com"> <a href="https://www.yfguangdong.com" target="_blank" rel="noopener">进入网站</a>
+						</div>
+					</div>
+
+					<img id="img-0" onload="imgdone0()" style="display: none;" src="https://www.yfguangdong.com/images/ui/close-icon.svg?0.679675810828887">
+									<div class="domain blue" id="domain-1">
+						<canvas width="150" height="150" id="circle-1" style="position: absolute;margin: -40px -75px;"></canvas>
+						<div class="ms-num ms-num-red">122</div>
+						<div class="ms-red">ms</div>
+						<div class="domian-textbox">
+							<input type="text" value="www.yfchongqing.com"> <a href="https://www.yfchongqing.com" target="_blank" rel="noopener">进入网站</a>
+						</div>
+					</div>
+
+					<img id="img-1" onload="imgdone1()" style="display: none;" src="https://www.yfchongqing.com/images/ui/close-icon.svg?0.8473910681132044">
+									<div class="domain blue" id="domain-2">
+						<canvas width="150" height="150" id="circle-2" style="position: absolute;margin: -40px -75px;"></canvas>
+						<div class="ms-num ms-num-red">120</div>
+						<div class="ms-red">ms</div>
+						<div class="domian-textbox">
+							<input type="text" value="www.yfshanghai.com"> <a href="https://www.yfshanghai.com" target="_blank" rel="noopener">进入网站</a>
+						</div>
+					</div>
+
+					<img id="img-2" onload="imgdone2()" style="display: none;" src="https://www.yfshanghai.com/images/ui/close-icon.svg?0.6954214307893107">
+									<div class="domain blue" id="domain-3">
+						<canvas width="150" height="150" id="circle-3" style="position: absolute;margin: -40px -75px;"></canvas>
+						<div class="ms-num ms-num-red">122</div>
+						<div class="ms-red">ms</div>
+						<div class="domian-textbox">
+							<input type="text" value="www.yftianjin.com"> <a href="https://www.yftianjin.com" target="_blank" rel="noopener">进入网站</a>
+						</div>
+					</div>
+
+					<img id="img-3" onload="imgdone3()" style="display: none;" src="https://www.yftianjin.com/images/ui/close-icon.svg?0.6080688169530346">
+									<div class="domain blue" id="domain-4">
+						<canvas width="150" height="150" id="circle-4" style="position: absolute;margin: -40px -75px;"></canvas>
+						<div class="ms-num ms-num-red">122</div>
+						<div class="ms-red">ms</div>
+						<div class="domian-textbox">
+							<input type="text" value="www.yfbeijing.com"> <a href="https://www.yfbeijing.com" target="_blank" rel="noopener">进入网站</a>
+						</div>
+					</div>
+
+					<img id="img-4" onload="imgdone4()" style="display: none;" src="https://www.yfbeijing.com/images/ui/close-icon.svg?0.3416467303677164">
+							</div>
+
+			<a href="/" class="refreshbtn" onclick="refreshping()"></a>
+		</div>
+
+		<footer>
+			<div class="weixin_qr">
+				<span id="wx1">
+					<img src="https://www.vipxianlu.com/images/navigator/qr_e8service.svg">
+					<p>易发微客服 (1)</p>
+					<p>e8_service</p>
+				</span>
+
+				<span id="wx2">
+					<img src="https://www.vipxianlu.com/images/navigator/qr_e8service28.svg">
+					<p>易发微客服 (2)</p>
+					<p>e8_service28</p>
+				</span>
+			</div>
+
+			<div id="footer">
+				<div class="contact">
+					<img src="https://media.wvwuwvuwvw.com/e8fe/images/navigator/email.png"> <a href="mailto:info@e8casino.com">info@e8casino.com</a>
+					<div class="mobileonly"></div>
+					<img src="https://media.wvwuwvuwvw.com/e8fe/images/navigator/skype.png"> <a href="skype:e8_service?chat" target="_blank" rel="noopener">e8_service</a>
+					<div class="mobileonly"></div>
+					<img src="https://media.wvwuwvuwvw.com/e8fe/images/navigator/qq.png"> <a href="https://wpa.qq.com/msgrd?v=3&amp;uin=2877969013&amp;site=qq&amp;menu=yes" target="_blank" rel="noopener">2877969013</a>
+				</div>
+				<div class="footfoot">
+					<p>如果以上地址无法访问，请发任意内容到邮箱:  <a href="mailto:info@e8casino.com">info@e8casino.com</a> 1分钟自动获取易发最新地址。</p>
+					<p>如无法收，请查看垃圾桶邮件，或者换别的邮箱再发。</p>
+				</div>
+				<div class="footfoot" style="color:#737373">易发国际 © 2020 版权所有</div>
+			</div>
+		</footer>
+
+		<script src="https://www.vipxianlu.com/js/vendors.min.js?v=7e3e08f9e1ee53de3cfeecb337e6be8b"></script>
+		<script src="https://www.vipxianlu.com/js/gauge-1.3.6.min.js"></script>
+
+		<script>
+			if (document.addEventListener) {
+				document.addEventListener('contextmenu', function(e) {
+					e.preventDefault();
+				}, false);
+			}
+			else {
+				document.attachEvent('oncontextmenu', function() {
+					window.event.returnValue = false;
+				});
+			}
+
+							var domain_0=Date.now();
+				$("#img-0").attr("src","https://www.yfguangdong.com/images/ui/close-icon.svg?"+Math.random());
+				function imgdone0(){
+					var ms = Date.now() - domain_0;
+					ms=Math.round(ms/8);
+					$("#domain-0").find(".ms-num").text(ms);
+					var demoGauge = new Gauge(document.getElementById("circle-0"));
+
+					if(ms>100)
+					{
+						//$("#domain-0").removeClass("blue").addClass("red");
+						$("#domain-0").find(".ms-num-blue").removeClass("ms-num-blue").addClass("ms-num-red");
+						$("#domain-0").find(".ms-blue").removeClass("ms-blue").addClass("ms-red");
+						var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#fa2c41',
+						  colorStart: '#ff7960',
+						  generateGradient: true,
+					    };
+				 	  demoGauge.set(50);
+					}
+					else
+					{
+						 var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#55d8e3',
+						  colorStart: '#6956ec',
+						  generateGradient: true,
+					    };
+				  	  demoGauge.set(100);
+					}
+
+
+				    demoGauge.setOptions(opts);
+				    demoGauge.minValue = 0;
+				    demoGauge.maxValue = 100;
+				    demoGauge.animationSpeed = 80;
+				}
+							var domain_1=Date.now();
+				$("#img-1").attr("src","https://www.yfchongqing.com/images/ui/close-icon.svg?"+Math.random());
+				function imgdone1(){
+					var ms = Date.now() - domain_1;
+					ms=Math.round(ms/8);
+					$("#domain-1").find(".ms-num").text(ms);
+					var demoGauge = new Gauge(document.getElementById("circle-1"));
+
+					if(ms>100)
+					{
+						//$("#domain-1").removeClass("blue").addClass("red");
+						$("#domain-1").find(".ms-num-blue").removeClass("ms-num-blue").addClass("ms-num-red");
+						$("#domain-1").find(".ms-blue").removeClass("ms-blue").addClass("ms-red");
+						var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#fa2c41',
+						  colorStart: '#ff7960',
+						  generateGradient: true,
+					    };
+				 	  demoGauge.set(50);
+					}
+					else
+					{
+						 var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#55d8e3',
+						  colorStart: '#6956ec',
+						  generateGradient: true,
+					    };
+				  	  demoGauge.set(100);
+					}
+
+
+				    demoGauge.setOptions(opts);
+				    demoGauge.minValue = 0;
+				    demoGauge.maxValue = 100;
+				    demoGauge.animationSpeed = 80;
+				}
+							var domain_2=Date.now();
+				$("#img-2").attr("src","https://www.yfshanghai.com/images/ui/close-icon.svg?"+Math.random());
+				function imgdone2(){
+					var ms = Date.now() - domain_2;
+					ms=Math.round(ms/8);
+					$("#domain-2").find(".ms-num").text(ms);
+					var demoGauge = new Gauge(document.getElementById("circle-2"));
+
+					if(ms>100)
+					{
+						//$("#domain-2").removeClass("blue").addClass("red");
+						$("#domain-2").find(".ms-num-blue").removeClass("ms-num-blue").addClass("ms-num-red");
+						$("#domain-2").find(".ms-blue").removeClass("ms-blue").addClass("ms-red");
+						var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#fa2c41',
+						  colorStart: '#ff7960',
+						  generateGradient: true,
+					    };
+				 	  demoGauge.set(50);
+					}
+					else
+					{
+						 var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#55d8e3',
+						  colorStart: '#6956ec',
+						  generateGradient: true,
+					    };
+				  	  demoGauge.set(100);
+					}
+
+
+				    demoGauge.setOptions(opts);
+				    demoGauge.minValue = 0;
+				    demoGauge.maxValue = 100;
+				    demoGauge.animationSpeed = 80;
+				}
+							var domain_3=Date.now();
+				$("#img-3").attr("src","https://www.yftianjin.com/images/ui/close-icon.svg?"+Math.random());
+				function imgdone3(){
+					var ms = Date.now() - domain_3;
+					ms=Math.round(ms/8);
+					$("#domain-3").find(".ms-num").text(ms);
+					var demoGauge = new Gauge(document.getElementById("circle-3"));
+
+					if(ms>100)
+					{
+						//$("#domain-3").removeClass("blue").addClass("red");
+						$("#domain-3").find(".ms-num-blue").removeClass("ms-num-blue").addClass("ms-num-red");
+						$("#domain-3").find(".ms-blue").removeClass("ms-blue").addClass("ms-red");
+						var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#fa2c41',
+						  colorStart: '#ff7960',
+						  generateGradient: true,
+					    };
+				 	  demoGauge.set(50);
+					}
+					else
+					{
+						 var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#55d8e3',
+						  colorStart: '#6956ec',
+						  generateGradient: true,
+					    };
+				  	  demoGauge.set(100);
+					}
+
+
+				    demoGauge.setOptions(opts);
+				    demoGauge.minValue = 0;
+				    demoGauge.maxValue = 100;
+				    demoGauge.animationSpeed = 80;
+				}
+							var domain_4=Date.now();
+				$("#img-4").attr("src","https://www.yfbeijing.com/images/ui/close-icon.svg?"+Math.random());
+				function imgdone4(){
+					var ms = Date.now() - domain_4;
+					ms=Math.round(ms/8);
+					$("#domain-4").find(".ms-num").text(ms);
+					var demoGauge = new Gauge(document.getElementById("circle-4"));
+
+					if(ms>100)
+					{
+						//$("#domain-4").removeClass("blue").addClass("red");
+						$("#domain-4").find(".ms-num-blue").removeClass("ms-num-blue").addClass("ms-num-red");
+						$("#domain-4").find(".ms-blue").removeClass("ms-blue").addClass("ms-red");
+						var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#fa2c41',
+						  colorStart: '#ff7960',
+						  generateGradient: true,
+					    };
+				 	  demoGauge.set(50);
+					}
+					else
+					{
+						 var opts = {
+					      angle: -0.35,
+					      lineWidth: 0.1,
+					      radiusScale:0.9,
+					      pointer: {
+					        length: 0,
+					        strokeWidth: 0,
+					        color: '#000000'
+					      },
+					      limitMax: false,
+					      limitMin: false,
+					      highDpiSupport: true,
+						  colorStop: '#55d8e3',
+						  colorStart: '#6956ec',
+						  generateGradient: true,
+					    };
+				  	  demoGauge.set(100);
+					}
+
+
+				    demoGauge.setOptions(opts);
+				    demoGauge.minValue = 0;
+				    demoGauge.maxValue = 100;
+				    demoGauge.animationSpeed = 80;
+				}
+			
+			function refreshping() {
+				location.reload();
+			}
+
+			function setSimpan() {
+				try {
+					window.external.addFavorite(window.location, '线路检查');
+				}
+				catch (e) {
+					try {
+						window.sidebar.addPanel('线路检查', window.location, "");
+					}
+					catch (e) {
+						alert("加入收藏失败，请使用Ctrl+D进行添加");
+					}
+				}
+			}
+
+			function setHome() {
+				try {
+					this.style.behavior='url(#default#homepage)';this.setHomePage(window.location);
+				}
+				catch(e){
+					if (window.netscape) {
+						try {
+							netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+						}
+						catch(e) {
+							alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+						}
+						var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+						prefs.setCharPref('browser.startup.homepage',window.location);
+					}
+					else {
+						alert("您的浏览器不支持，请按照下面步骤操作：1.打开浏览器设置。2.点击设置网页。3.输入："+window.location+"点击确定。");
+					}
+				}
+			};
+		</script>
+
+		
+		<script>
+			var __lc = {
+				license: 2434331,
+				group: 5
+			};
+		</script>
+
+		<script async="" src="https://www.vipxianlu.com/js/livechatinc/tracking.js?v=4"></script>
+	
+
+<script src="https://secure.livechatinc.com/licence/2434331/v2/get_dynamic_config.js?t=1597212564166&amp;referrer=https%3A%2F%2Fwww.vipxianlu.com%2Fhome&amp;url=https%3A%2F%2Fwww.vipxianlu.com%2Fhome&amp;params=&amp;channel_type=code&amp;jsonp=__lc_data_729411&amp;groups=5"></script><script src="https://secure.livechatinc.com/licence/2434331/v2/get_static_config.5.2879.9.10.2552.5023.403.48.14.6.229.4.6.js?&amp;jsonp=__lc_data_static_config&amp;groups=5"></script><script src="https://secure.livechatinc.com/licence/2434331/v2/localization.cn.5.3b76201adfd3ffd08e425fb404779039_5f4f66c75d4fe10f6b605ab6abce9a3a.js?jsonp=__lc_lang"></script><div id="livechat-compact-container" style="position: fixed; bottom: 0px; right: 15px; width: 75px; height: 105px; overflow: hidden; visibility: visible; z-index: 2147483639; background: transparent; border: 0px; transition: transform 0.2s ease-in-out 0s; backface-visibility: hidden; opacity: 1; transform: translateY(0%);"><iframe src="about:blank" id="livechat-compact-view" style="position: relative;top: 20px;left: 0;width: 100%;border: 0;padding: 0;margin: 0;float: none;background: none" scrolling="no" allowtransparency="true" title="LiveChat Minimized Widget"></iframe><a id="livechat-badge" href="#" onclick="LC_API.show_full_view({source:'minimized click'});return false" style="position: absolute;display: block;visibility: hidden;height: 16px;padding: 0 4px;line-height: 16px;background: #f00;color: #fff;font-size: 10px;text-decoration: none;font-family: 'Lucida Grande', 'Lucida Sans Unicode', Arial, Verdana, sans-serif;border-radius: 3px;box-shadow: 0 -1px 0px #f00, -1px 0 0px #f00, 1px 0 0px #f00, 0 1px 0px #f00, 0 0 2px #000;border-top: 1px solid #f99;width: 16px;border-radius: 50%;box-shadow: none;border-top: 0;padding: 0;text-align: center;font-family: 'Lato', sans-serif;top: 23px;right: 8px"></a></div><div id="livechat-full" style="position: fixed; bottom: 0px; right: 15px; width: 400px; height: 450px; overflow: hidden; visibility: hidden; z-index: -1; background: transparent; border: 0px; transition: transform 0.2s ease-in-out 0s; backface-visibility: hidden; transform: translateY(100%); opacity: 0;"><iframe src="https://secure.livechatinc.com/licence/2434331/v2/open_chat.cgi?groups=5&amp;embedded=1&amp;newWebserv=undefined&amp;widget_version=2&amp;__lc_vv=2&amp;session_id=S1571899796.521d154bfd&amp;server=secure.livechatinc.com#https://www.vipxianlu.com/home" id="livechat-full-view" name="livechat-full-view" title="LiveChat Widget" scrolling="no" allowtransparency="true" allow="autoplay" style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; width: 100%; height: 100%; border: 0px; padding: 0px; margin: 0px; float: none; background: none;"></iframe></div><div id="lc_invite_layer" style="text-align: left; display: none; z-index: 16777261;"></div><div id="lc_overlay_layer" style="background-color: rgb(0, 0, 0); position: fixed; left: 0px; top: 0px; z-index: 16777260; display: none; width: 100%; height: 100%;"></div><script id="livechat-ping" src="https://secure.livechatinc.com/licence/2434331/v2/ping?t=1597213353116&amp;data=%7B%22visitor%22%3A%7B%22id%22%3A%22S1571899796.521d154bfd%22%7D%7D&amp;jsonp=__lc_ping_721672"></script></body></html>
