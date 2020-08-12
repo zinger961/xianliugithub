@@ -279,7 +279,7 @@
 			</header>
 
 			<div class="iplocation">
-				<span style="font-size: 20px;">您当前的IP位置</span> <span style="font-size: 36px;color:#fff;">211.24.96.115</span><div style="font-size: 16px;">备用网址温馨提示：反应时间越小，网站速度越快。</div>
+				<span style="font-size: 20px;">您当前的IP位置</span> <span style="font-size: 36px;color:#fff;" id="myip"></span><div style="font-size: 16px;">备用网址温馨提示：反应时间越小，网站速度越快。</div>
 			</div>
 
 			<div class="ping">
@@ -717,6 +717,9 @@
 
 		
 		<script>
+			$.get('https://www.cloudflare.com/cdn-cgi/trace', function(data) {
+   $("#myip").text(data.ip)
+})
 			var __lc = {
 				license: 2434331,
 				group: 5
